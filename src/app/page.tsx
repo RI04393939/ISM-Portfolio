@@ -63,7 +63,10 @@ export default function Home() {
           fontStyle: 'italic',
           letterSpacing: '0.03em',
         }}>
-          &ldquo;[Your quote here]&rdquo;
+          &ldquo;Intelligence is usually easy to tell in a 10-minute conversation. Determination is harder&rdquo;
+          <footer style={{ marginTop: '0.75rem', fontSize: '0.7rem', fontStyle: 'normal', letterSpacing: '0.1em', color: '#3a3a3a', textTransform: 'uppercase' }}>
+            — Sam Altman, CEO of OpenAI
+          </footer>
         </blockquote>
       </section>
     </main>
