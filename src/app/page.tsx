@@ -1,95 +1,71 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main style={{ position: 'relative', zIndex: 1 }}>
+      <section style={{
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'flex-start',
+        padding: '0 2rem',
+        maxWidth: '900px',
+        margin: '0 auto',
+      }}>
+        <p style={{
+          fontSize: '0.65rem',
+          letterSpacing: '0.2em',
+          textTransform: 'uppercase',
+          color: 'var(--accent)',
+          opacity: 0.7,
+          marginBottom: '1rem',
+        }}>
+          ISM Digital Portfolio
+        </p>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+        <h1 style={{
+          fontSize: 'clamp(3rem, 8vw, 6rem)',
+          fontWeight: 700,
+          letterSpacing: '-0.03em',
+          lineHeight: 1.05,
+          marginBottom: '1rem',
+          background: 'linear-gradient(135deg, #ffffff 0%, var(--accent) 100%)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+        }}>
+          Rithvik<br />Inampudi
+        </h1>
+
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.75rem',
+          marginBottom: '2.5rem',
+        }}>
+          <div style={{ width: 32, height: 1, background: 'var(--accent)', opacity: 0.5 }} />
+          <p style={{
+            fontSize: '0.8rem',
+            letterSpacing: '0.15em',
+            textTransform: 'uppercase',
+            color: '#888',
+          }}>
+            Topic of Study: Deep Learning
+          </p>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <blockquote style={{
+          maxWidth: '520px',
+          borderLeft: '2px solid rgba(96, 165, 250, 0.3)',
+          paddingLeft: '1.25rem',
+          color: '#555',
+          fontSize: '0.85rem',
+          lineHeight: 1.7,
+          fontStyle: 'italic',
+          letterSpacing: '0.03em',
+        }}>
+          &ldquo;[Your quote here]&rdquo;
+        </blockquote>
+      </section>
+    </main>
   );
 }
