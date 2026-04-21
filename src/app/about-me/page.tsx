@@ -1,14 +1,19 @@
+import Image from 'next/image';
+
 export default function AboutMe() {
   return (
     <main className="page-container">
       <h1 className="page-heading reveal">About Me</h1>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '2rem', marginBottom: '2rem' }}>
-        {/* Photo placeholder */}
-        <div className="placeholder-box reveal" style={{ minHeight: '280px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
-          <span style={{ fontSize: '2rem', opacity: 0.3 }}>[ ]</span>
-          <span>Professional Photo</span>
-          <span style={{ opacity: 0.5, fontSize: '0.6rem' }}>Add photo in professional attire</span>
+        {/* Professional photo */}
+        <div className="reveal" style={{ position: 'relative', minHeight: '320px', borderRadius: '8px', overflow: 'hidden' }}>
+          <Image
+            src="/profile.png"
+            alt="Rithvik Inampudi — professional photo"
+            fill
+            style={{ objectFit: 'cover', objectPosition: 'top' }}
+          />
         </div>
 
         {/* Bio */}

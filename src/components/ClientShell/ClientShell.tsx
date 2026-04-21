@@ -1,9 +1,11 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Navbar from '@/components/Navbar/Navbar';
 
 export default function ClientShell({ children }: { children: React.ReactNode }) {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const pathname = usePathname();
   const bgCanvasRef = useRef<HTMLCanvasElement>(null);
   const cursorDotRef = useRef<HTMLDivElement>(null);
   const cursorRingRef = useRef<HTMLDivElement>(null);
@@ -78,22 +80,26 @@ export default function ClientShell({ children }: { children: React.ReactNode })
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Scroll reveal
+  // Scroll reveal — re-runs on every page navigation
   useEffect(() => {
-    const els = document.querySelectorAll<HTMLElement>('.reveal');
-    if (!els.length) return;
-    const obs = new IntersectionObserver(
-      (entries) => entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          obs.unobserve(e.target);
-        }
-      }),
-      { threshold: 0.1 }
-    );
-    els.forEach(el => obs.observe(el));
-    return () => obs.disconnect();
-  }, []);
+    // Small delay so the new page's DOM is painted before we query
+    const id = setTimeout(() => {
+      const els = document.querySelectorAll<HTMLElement>('.reveal:not(.visible)');
+      if (!els.length) return;
+      const obs = new IntersectionObserver(
+        (entries) => entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
+          }
+        }),
+        { threshold: 0.05 }
+      );
+      els.forEach(el => obs.observe(el));
+      return () => obs.disconnect();
+    }, 50);
+    return () => clearTimeout(id);
+  }, [pathname]);
 
   // Background particle canvas
   useEffect(() => {

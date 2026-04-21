@@ -1,6 +1,18 @@
+import Image from 'next/image';
+
 export default function Home() {
   return (
     <main style={{ position: 'relative', zIndex: 1 }}>
+      {/* Background image */}
+      <div style={{ position: 'fixed', inset: 0, zIndex: -1, overflow: 'hidden' }}>
+        <Image
+          src="/dl-bg.jpeg"
+          alt="Deep learning background"
+          fill
+          style={{ objectFit: 'cover', opacity: 0.12 }}
+          priority
+        />
+      </div>
       <section style={{
         minHeight: '100vh',
         display: 'flex',
