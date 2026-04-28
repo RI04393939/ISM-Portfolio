@@ -32,8 +32,6 @@ export default function Research() {
               { date: 'January 14, 2026', subject: 'Interview with Subramanian Sankaran — Introduction to Deep Learning Research' },
               { date: 'February 11, 2026', subject: 'Interview with Subramanian Sankaran — Neural Network Architectures & Transformer Models' },
               { date: 'March 4, 2026',    subject: 'Interview with Subramanian Sankaran — Large Language Models & Fine-Tuning Strategies' },
-              { date: 'April 1, 2026',    subject: 'Interview with Subramanian Sankaran — AI Ethics, Bias, and Responsible Development' },
-              { date: 'May 6, 2026',      subject: 'Interview with Subramanian Sankaran — Future of AI & Original Work Review' },
             ].map((item) => (
               <div key={item.date} style={{
                 display: 'flex',
