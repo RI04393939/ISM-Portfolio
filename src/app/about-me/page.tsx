@@ -9,7 +9,7 @@ export default function AboutMe() {
         {/* Professional photo */}
         <div className="reveal" style={{ position: 'relative', minHeight: '320px', borderRadius: '8px', overflow: 'hidden' }}>
           <Image
-            src="/profile.png"
+            src="/profile-new.jpg"
             alt="Rithvik Inampudi — professional photo"
             fill
             style={{ objectFit: 'cover', objectPosition: 'top' }}

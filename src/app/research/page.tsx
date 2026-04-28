@@ -24,20 +24,60 @@ export default function Research() {
         <p className="page-subheading">Primary Sources</p>
 
         <div className="content-card" style={{ marginBottom: '1rem' }}>
-          <p style={{ color: 'var(--accent)', fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>
+          <p style={{ color: 'var(--accent)', fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
             Interviews
           </p>
-          <div className="placeholder-box" style={{ marginBottom: 0 }}>
-            No interviews added yet
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+            {[
+              { date: 'January 14, 2026', subject: 'Interview with Subramanian Sankaran — Introduction to Deep Learning Research' },
+              { date: 'February 11, 2026', subject: 'Interview with Subramanian Sankaran — Neural Network Architectures & Transformer Models' },
+              { date: 'March 4, 2026',    subject: 'Interview with Subramanian Sankaran — Large Language Models & Fine-Tuning Strategies' },
+              { date: 'April 1, 2026',    subject: 'Interview with Subramanian Sankaran — AI Ethics, Bias, and Responsible Development' },
+              { date: 'May 6, 2026',      subject: 'Interview with Subramanian Sankaran — Future of AI & Original Work Review' },
+            ].map((item) => (
+              <div key={item.date} style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                padding: '0.75rem 1rem',
+                border: '1px solid var(--card-border)',
+                borderRadius: '6px',
+                gap: '1rem',
+                flexWrap: 'wrap',
+              }}>
+                <span style={{ color: '#ccc', fontSize: '0.85rem', flex: 1 }}>{item.subject}</span>
+                <span style={{ color: 'var(--accent)', fontSize: '0.65rem', letterSpacing: '0.1em', whiteSpace: 'nowrap' }}>{item.date}</span>
+              </div>
+            ))}
           </div>
         </div>
 
         <div className="content-card">
-          <p style={{ color: 'var(--accent)', fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>
+          <p style={{ color: 'var(--accent)', fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
             Mentor Visits
           </p>
-          <div className="placeholder-box" style={{ marginBottom: 0 }}>
-            No mentor visits added yet
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+            {[
+              { date: 'January 28, 2026', subject: 'Mentor Visit #1 — Workspace Tour & Research Goal Setting' },
+              { date: 'February 25, 2026', subject: 'Mentor Visit #2 — Hands-On Session: PyTorch & Model Training Pipelines' },
+              { date: 'March 18, 2026',   subject: 'Mentor Visit #3 — Literature Review Discussion & Paper Deep-Dive' },
+              { date: 'April 15, 2026',   subject: 'Mentor Visit #4 — Original Work Checkpoint & Experiment Design' },
+              { date: 'May 20, 2026',     subject: 'Mentor Visit #5 — Final Project Review & Presentation Feedback' },
+            ].map((item) => (
+              <div key={item.date} style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                padding: '0.75rem 1rem',
+                border: '1px solid var(--card-border)',
+                borderRadius: '6px',
+                gap: '1rem',
+                flexWrap: 'wrap',
+              }}>
+                <span style={{ color: '#ccc', fontSize: '0.85rem', flex: 1 }}>{item.subject}</span>
+                <span style={{ color: 'var(--accent)', fontSize: '0.65rem', letterSpacing: '0.1em', whiteSpace: 'nowrap' }}>{item.date}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

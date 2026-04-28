@@ -9,7 +9,7 @@ export default function Home() {
           src="/dl-bg.jpeg"
           alt="Deep learning background"
           fill
-          style={{ objectFit: 'cover', opacity: 0.12 }}
+          style={{ objectFit: 'cover', opacity: 0.38 }}
           priority
         />
       </div>
@@ -40,10 +40,7 @@ export default function Home() {
           letterSpacing: '-0.03em',
           lineHeight: 1.05,
           marginBottom: '1rem',
-          background: 'linear-gradient(135deg, #ffffff 0%, var(--accent) 100%)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
+          color: '#ffffff',
         }}>
           Rithvik<br />Inampudi
         </h1>
@@ -69,14 +66,14 @@ export default function Home() {
           maxWidth: '520px',
           borderLeft: '2px solid rgba(96, 165, 250, 0.3)',
           paddingLeft: '1.25rem',
-          color: '#555',
+          color: '#999',
           fontSize: '0.85rem',
           lineHeight: 1.7,
           fontStyle: 'italic',
           letterSpacing: '0.03em',
         }}>
           &ldquo;Intelligence is usually easy to tell in a 10-minute conversation. Determination is harder&rdquo;
-          <footer style={{ marginTop: '0.75rem', fontSize: '0.7rem', fontStyle: 'normal', letterSpacing: '0.1em', color: '#3a3a3a', textTransform: 'uppercase' }}>
+          <footer style={{ marginTop: '0.75rem', fontSize: '0.7rem', fontStyle: 'normal', letterSpacing: '0.1em', color: '#666', textTransform: 'uppercase' }}>
             — Sam Altman, CEO of OpenAI
           </footer>
         </blockquote>
